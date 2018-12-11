@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca587b76-4ab0-4676-8c93-03e0ae5ab55b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/InitalizeDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvHandel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchedCountry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/CountryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/google-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/resources/csv/world.csv" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/resources/csv/world.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/google-service/target/" />
     <ignored path="$PROJECT_DIR$/youtube-service/target/" />
@@ -36,55 +36,69 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="googletrend@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GoogleServiceApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#258#259#0" expanded="true" />
-                <element signature="e#325#326#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RestControllerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#620#621#0" expanded="true" />
-                <element signature="e#977#978#0" expanded="true" />
-                <element signature="e#1003#1004#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchingResult.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchingResultRepository.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchingResultRepository.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="253">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CountryRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/CountryRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchingResult.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#398#399#0" expanded="true" />
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchedCountry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchedCountry.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#638#639#0" expanded="true" />
+                <element signature="e#707#708#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+                <element signature="e#857#858#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#930#931#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +106,8 @@
       <file leaf-file-name="CsvHandel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvHandel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="-95">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#360#361#0" expanded="true" />
@@ -118,6 +132,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -147,14 +162,17 @@
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java" />
         <option value="$PROJECT_DIR$/google-service/src/main/resources/valami.xml" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/DBBuilder.java" />
-        <option value="$PROJECT_DIR$/google-service/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/google-service/src/main/resources/csv/world.csv" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvReader.java" />
-        <option value="$PROJECT_DIR$/google-service/pom.xml" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/Result.java" />
-        <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvHandel.java" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/InitalizeDB.java" />
+        <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" />
+        <option value="$PROJECT_DIR$/google-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/google-service/pom.xml" />
+        <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchedCountry.java" />
+        <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java" />
+        <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/Country.java" />
         <option value="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java" />
       </list>
     </option>
@@ -265,6 +283,13 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="google_service" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2018rewind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="google-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -442,7 +467,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544523666738</updated>
-      <workItem from="1544523668061" duration="11800000" />
+      <workItem from="1544523668061" duration="15039000" />
     </task>
     <task id="LOCAL-00001" summary="xml files updated">
       <created>1544524181002</created>
@@ -479,11 +504,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544538387548</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Repository, InitalizeDB, module created">
+      <created>1544544460414</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1544544460414</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Application.properties updated">
+      <created>1544545473274</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544545473274</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11800000" />
+    <option name="totallyTimeSpent" value="15039000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -577,7 +616,9 @@
     <MESSAGE value="pom file updated with JSONObject dependency" />
     <MESSAGE value="csv file added, csv plugins installed" />
     <MESSAGE value="csv file imported, 'world.csv' updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="csv file imported, 'world.csv' updated" />
+    <MESSAGE value="Repository, InitalizeDB, module created" />
+    <MESSAGE value="Application.properties updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="Application.properties updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -601,13 +642,6 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/2e88967c-e210-48a4-a23e-97e1713d0028/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -622,18 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/google-service/target/classes/csv/usa.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
@@ -644,31 +666,10 @@
     <entry file="file://$PROJECT_DIR$/google-service/target/classes/csv/world.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/google-service/target/classes/csv/uk.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="27" column="64" lean-forward="true" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#977#978#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -679,15 +680,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvHandel.java">
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="230">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-89">
+          <caret line="3" column="27" lean-forward="true" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#977#978#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7fae5a3c-d7c5-4721-a48b-4dfc843af80e/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
@@ -698,17 +729,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java">
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/CsvHandel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="-95">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/SearchingResultRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="253">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/repository/CountryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchedCountry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#707#708#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#857#858#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#930#931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/modul/SearchingResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
