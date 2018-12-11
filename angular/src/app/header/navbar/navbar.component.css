@@ -11,8 +11,12 @@ a:focus {
   outline: none;
 }
 
-.navbar-container {
+.navbar {
+  position: sticky;
+  top: 0;
+}
 
+.navbar-container {
   display: table;
   width: 100%;
   table-layout: fixed;
@@ -23,10 +27,6 @@ a:focus {
   height: 70px;
   text-align: center;
   vertical-align: middle;
-}
-
-.slider-container {
-  position: relative;
 }
 
 .youtube {
