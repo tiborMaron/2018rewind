@@ -1,9 +1,6 @@
 package com.codecool.google_service.modul;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class SearchingResult {
@@ -14,12 +11,25 @@ public class SearchingResult {
 
     private String searchedResult;
 
+    @OneToOne
+    private SearchedCountry country;
+
+    public SearchingResult(){}
+
 
     public SearchingResult(String searchedResult) {
         this.searchedResult = searchedResult;
     }
 
+    public SearchedCountry getCountry() {
+        return country;
+    }
+
     public String getSearchedResult() {
         return searchedResult;
+    }
+
+    public void setCountry(SearchedCountry country) {
+        this.country = country;
     }
 }

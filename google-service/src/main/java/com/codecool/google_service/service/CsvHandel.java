@@ -18,13 +18,13 @@ public class CsvHandel {
         return null;
     }
 
+
     public List<String> readCSVFile(String filePath) {
         List<String> listOfRestuls = new ArrayList<>();
 
         URL url = CsvHandel.class.getClassLoader().getResource(filePath);
         System.out.println(url);
         String urlPath = url.getPath();
-
         try (Stream<String> stream = Files.lines(Paths.get(urlPath))){
             stream.skip(2).map(t -> t.split(",")[0]).forEach(line -> listOfRestuls.add(line));
         } catch (IOException ioe) {
@@ -33,6 +33,7 @@ public class CsvHandel {
         }
         return listOfRestuls;
     }
+
 
     // TODO this part need only when you have your things in the DB
     private String buildJSONArray(List<String> listOfResult) {

@@ -12,21 +12,15 @@ public class SearchedCountry {
 
     private String countryName;
 
-    @OneToMany
+    @OneToMany(mappedBy = "country")
     private List<SearchingResult> listOfTopSearch = new ArrayList<>();
 
-    public SearchedCountry(String countryName, List<SearchingResult> listOfTopSearch) {
-        this.countryName = countryName;
-        this.listOfTopSearch = listOfTopSearch;
-    }
+    public SearchedCountry(){}
 
     public SearchedCountry(String countryName) {
         this.countryName = countryName;
     }
 
-    public SearchedCountry(List<SearchingResult> listOfTopSearch) {
-        this.listOfTopSearch = listOfTopSearch;
-    }
 
     public List<SearchingResult> getListOfTopSearch() {
         return listOfTopSearch;
@@ -34,5 +28,9 @@ public class SearchedCountry {
 
     public String getCountryName() {
         return countryName;
+    }
+
+    public void setListOfTopSearch(List<SearchingResult> listOfTopSearch) {
+        this.listOfTopSearch = listOfTopSearch;
     }
 }
