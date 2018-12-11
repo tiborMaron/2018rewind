@@ -21,7 +21,7 @@ import { NetflixResultsComponent } from './netflix/netflix-results/netflix-resul
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    SliderComponent
+    SliderComponent,
     YoutubeComponent,
     SpotifyComponent,
     GoogleComponent,
