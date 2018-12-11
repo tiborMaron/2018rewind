@@ -1,4 +1,4 @@
-export class NetflixResult {
+export class YoutubeResult {
   rank: number
   title: string
 }
