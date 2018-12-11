@@ -10,6 +10,6 @@ public class SpotifyServiceApp {
     public static void main(String[] args) {
         SpotifyService spotifyService = new SpotifyService();
 
-        spotifyService.getData();
+        spotifyService.readData();
     }
 }

@@ -5,14 +5,12 @@ import javax.persistence.*;
 @Entity
 public class Track {
 
-    @Column(name = "title")
+    int id;
     String title;
-
-    @Column(name = "name")
     String name;
+    int stream;
+    String url;
 
-    @Column(name = "stream")
-    long stream;
 
     public String getTitle() {
         return title;
@@ -34,7 +32,36 @@ public class Track {
         return stream;
     }
 
-    public void setStream(long stream) {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setStream(int stream) {
         this.stream = stream;
+    }
+
+    public Track(String title) {
+        this.title = title;
+    }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+                "title='" + title + '\'' +
+                ", name='" + name + '\'' +
+                ", stream=" + stream +
+                '}';
     }
 }
