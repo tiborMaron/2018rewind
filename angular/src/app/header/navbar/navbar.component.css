@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:active {
+  color: initial;
+}
+
+a:focus {
+  outline: none;
+}
+
+.navbar-container {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.navbar-item {
+  display: table-cell;
+  height: 70px;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
