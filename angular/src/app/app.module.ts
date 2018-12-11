@@ -13,7 +13,7 @@ import { NetflixComponent } from './netflix/netflix.component';
 import { YoutubeResultComponent } from './youtube/youtube-result/youtube-result.component';
 import { SpotifyResultComponent } from './spotify/spotify-result/spotify-result.component';
 import { GoogleResultsComponent } from './google/google-results/google-results.component';
-import { NetflixResultsComponent } from './netflix/netflix-results/netflix-results.component';
+import { NetflixResultComponent } from './netflix/netflix-result/netflix-result.component';
 
 
 @NgModule({
@@ -29,7 +29,7 @@ import { NetflixResultsComponent } from './netflix/netflix-results/netflix-resul
     YoutubeResultComponent,
     SpotifyResultComponent,
     GoogleResultsComponent,
-    NetflixResultsComponent
+    NetflixResultComponent
   ],
   imports: [
     BrowserModule,
