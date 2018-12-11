@@ -11,8 +11,12 @@ a:focus {
   outline: none;
 }
 
-.navbar-container {
+.navbar {
+  position: sticky;
+  top: 0;
+}
 
+.navbar-container {
   display: table;
   width: 100%;
   table-layout: fixed;
@@ -21,17 +25,25 @@ a:focus {
 .navbar-item {
   display: table-cell;
   height: 70px;
-  border: 1px solid black;
   text-align: center;
   vertical-align: middle;
 }
 
-.slider-container {
-  position: relative;
+.youtube {
+  background-color: red;
+  color: white;
 }
 
-.slider {
-  position: absolute;
-  top: 0;
-  left: 25%;
+.netflix {
+  background-color: black;
+  color: red;
+}
+
+.spotify {
+  background-color: green;
+  color: white;
+}
+
+.google {
+
 }
