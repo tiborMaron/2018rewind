@@ -15,7 +15,7 @@ export class GoogleService {
     return of(this.mock)
   }
 
-  getResults(page: number): GoogleResult[] {
+  getResultsByPage(page: number): Observable<GoogleResult[]> {
     return of(this.mock);
   }
 

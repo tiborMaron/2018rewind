@@ -10,10 +10,10 @@ import { YoutubeComponent } from './youtube/youtube.component';
 import { SpotifyComponent } from './spotify/spotify.component';
 import { GoogleComponent } from './google/google.component';
 import { NetflixComponent } from './netflix/netflix.component';
-import { YoutubeResultsComponent } from './youtube/youtube-results/youtube-results.component';
-import { SpotifyResultsComponent } from './spotify/spotify-results/spotify-results.component';
-import { GoogleResultsComponent } from './google/google-results/google-results.component';
-import { NetflixResultsComponent } from './netflix/netflix-results/netflix-results.component';
+import { YoutubeResultComponent } from './youtube/youtube-result/youtube-result.component';
+import { SpotifyResultComponent } from './spotify/spotify-result/spotify-result.component';
+import { GoogleResultComponent } from './google/google-result/google-result.component';
+import { NetflixResultComponent } from './netflix/netflix-result/netflix-result.component';
 
 
 @NgModule({
@@ -26,10 +26,10 @@ import { NetflixResultsComponent } from './netflix/netflix-results/netflix-resul
     SpotifyComponent,
     GoogleComponent,
     NetflixComponent,
-    YoutubeResultsComponent,
-    SpotifyResultsComponent,
-    GoogleResultsComponent,
-    NetflixResultsComponent
+    YoutubeResultComponent,
+    SpotifyResultComponent,
+    GoogleResultComponent,
+    NetflixResultComponent
   ],
   imports: [
     BrowserModule,

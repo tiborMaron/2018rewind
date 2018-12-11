@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SpotifyResult} from "../model/SpotifyResult";
+import {SpotifyService} from "../service/spotify.service";
 
 @Component({
   selector: 'app-spotify',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpotifyComponent implements OnInit {
 
-  constructor() { }
+  results: SpotifyResult[];
+
+  constructor(
+    private service: SpotifyService
+  ) { }
 
   ngOnInit() {
+    this.service.getResults().subscribe(
+      results => this.results = results
+    )
   }
 
 }
