@@ -15,7 +15,7 @@ export class SpotifyService {
     return of(this.mock)
   }
 
-  getResults(page: number): SpotifyResult[] {
+  getResultsByPage(page: number): Observable<SpotifyResult[]>{
     return of(this.mock);
   }
 

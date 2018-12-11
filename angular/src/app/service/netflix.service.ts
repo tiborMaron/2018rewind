@@ -15,7 +15,7 @@ export class NetflixService{
     return of(this.mock)
   }
 
-  getResults(page: number): NetflixResult[] {
+  getResultsByPage(page: number): Observable<NetflixResult[]>{
     return of(this.mock);
   }
 
