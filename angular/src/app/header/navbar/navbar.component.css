@@ -12,6 +12,7 @@ a:focus {
 }
 
 .navbar-container {
+
   display: table;
   width: 100%;
   table-layout: fixed;
