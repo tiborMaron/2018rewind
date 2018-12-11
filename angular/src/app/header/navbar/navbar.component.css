@@ -21,7 +21,6 @@ a:focus {
 .navbar-item {
   display: table-cell;
   height: 70px;
-  border: 1px solid black;
   text-align: center;
   vertical-align: middle;
 }
@@ -30,8 +29,21 @@ a:focus {
   position: relative;
 }
 
-.slider {
-  position: absolute;
-  top: 0;
-  left: 25%;
+.youtube {
+  background-color: red;
+  color: white;
+}
+
+.netflix {
+  background-color: black;
+  color: red;
+}
+
+.spotify {
+  background-color: green;
+  color: white;
+}
+
+.google {
+
 }
