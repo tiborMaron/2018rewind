@@ -12,7 +12,7 @@ import { GoogleComponent } from './google/google.component';
 import { NetflixComponent } from './netflix/netflix.component';
 import { YoutubeResultComponent } from './youtube/youtube-result/youtube-result.component';
 import { SpotifyResultComponent } from './spotify/spotify-result/spotify-result.component';
-import { GoogleResultsComponent } from './google/google-results/google-results.component';
+import { GoogleResultComponent } from './google/google-result/google-result.component';
 import { NetflixResultComponent } from './netflix/netflix-result/netflix-result.component';
 
 
@@ -28,7 +28,7 @@ import { NetflixResultComponent } from './netflix/netflix-result/netflix-result.
     NetflixComponent,
     YoutubeResultComponent,
     SpotifyResultComponent,
-    GoogleResultsComponent,
+    GoogleResultComponent,
     NetflixResultComponent
   ],
   imports: [
