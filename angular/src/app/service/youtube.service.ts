@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import {GoogleResult} from "../model/GoogleResult";
 import {Observable, of} from "rxjs/index";
 import {YoutubeResult} from "../model/YoutubeResult";
-import {SpotifyResult} from "../model/SpotifyResult";
 
 @Injectable({
   providedIn: 'root'
