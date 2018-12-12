@@ -11,4 +11,6 @@ import java.util.List;
 @RestController
 public interface SearchingResultRepository extends JpaRepository<SearchingResult, Long> {
 
+    @Transactional
+    List<SearchingResult>findSearchingResultByCountryName(String name);
 }

@@ -10,6 +10,7 @@ public class SearchingResult {
     private Long id;
 
     private String searchedResult;
+    private String countryName;
 
     @OneToOne
     private SearchedCountry country;
@@ -31,5 +32,6 @@ public class SearchingResult {
 
     public void setCountry(SearchedCountry country) {
         this.country = country;
+        this.countryName = this.country.getCountryName();
     }
 }
