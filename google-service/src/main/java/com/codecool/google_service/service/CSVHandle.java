@@ -18,7 +18,8 @@ public class CSVHandle {
         System.out.println(url);
         String urlPath = url.getPath();
         try (Stream<String> stream = Files.lines(Paths.get(urlPath))){
-            stream.skip(2).map(t -> t.split(",")[0]).forEach(line -> listOfRestuls.add(line));
+            //stream.skip(2).map(t -> t.split(",")[0]).forEach(line -> listOfRestuls.add(line));
+            stream.skip(2).filter(t -> t.contains(",")).forEach(line -> listOfRestuls.add(line));
         } catch (IOException ioe) {
             ioe.printStackTrace();
             return listOfRestuls;
