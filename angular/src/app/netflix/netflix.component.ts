@@ -21,7 +21,7 @@ export class NetflixComponent implements OnInit {
       results => this.results = results
     );
 
-    this.renderer.setStyle(document.body, 'background-color', '#141414')
+    this.renderer.setStyle(document.body, 'background', '#141414')
   }
 
 }
