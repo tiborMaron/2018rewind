@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class Query { //TODO make a better name for this class.
+public class Query {
 
     @Autowired
     SearchingResultRepository searchingResultRepository;

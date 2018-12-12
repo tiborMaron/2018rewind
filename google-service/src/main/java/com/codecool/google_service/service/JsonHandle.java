@@ -1,11 +1,5 @@
 package com.codecool.google_service.service;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -17,7 +11,7 @@ public class JsonHandle {
         List<Map> list = new ArrayList<>();
         for (int i = 0; i < listOfSearchResult.size(); i++) {
             Map smallMap = new HashMap<>();
-            smallMap.put("rank", i);
+            smallMap.put("rank", i + 1);
             smallMap.put("name", listOfSearchResult.get(i).split(",")[0]);
             smallMap.put("value", listOfSearchResult.get(i).split(",")[1]);
             list.add(smallMap);
