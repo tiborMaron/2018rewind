@@ -23,27 +23,37 @@ public class RestControllerService {
     @Autowired
     SearchingResultRepository searchingResultRepository;
 
+    @Autowired
+    Query query;
+
+    @Autowired
+    JsonHandle jsonHandle;
+
     @GetMapping("/get-toplist")
     public @ResponseBody List<Map> getTopListInJSON() {
-        List listOfTopSearch = new JsonHandle().buildJSONObject(
-                new Query().makeListOfStringOfTopSearch(
-                        searchingResultRepository.findSearchingResultByCountryName("hungary")));
-        return listOfTopSearch;
+        return handleUserRequest("world");
     }
 
     @GetMapping("/get-toplist/{page}")
     public JSONObject getToplistByPage(@PathVariable String page) {
-        System.out.println("This is the page " + page);
         return null;
     }
 
     @GetMapping("/get-toplist-by-country/{country}")
-    public JSONObject getTopListByCountry(@PathVariable("county") String country) {
-        return null;
+    public List<Map> getTopListByCountry(@PathVariable String country) {
+        return handleUserRequest(country);
     }
+
 
     @GetMapping("/get-toplist-by-country/{country}?page={page}")
     public JSONObject getTopListByCountryAndByPage(@PathVariable("county") String country, @PathVariable("page") String page) {
         return null;
+    }
+
+    private List<Map> handleUserRequest(String country) {
+        List listOfTopSearch = jsonHandle.buildJSONObject(
+                query.makeListOfStringOfTopSearch(
+                        searchingResultRepository.findSearchingResultByCountryName(country)));
+        return listOfTopSearch;
     }
 }

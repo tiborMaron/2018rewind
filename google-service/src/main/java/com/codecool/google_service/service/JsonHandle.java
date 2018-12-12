@@ -1,12 +1,17 @@
 package com.codecool.google_service.service;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class JsonHandle {
 
+    @Bean
     public List buildJSONObject(List<String> listOfSearchResult) {
         List<Map> list = new ArrayList<>();
         for (int i = 0; i < listOfSearchResult.size(); i++) {
