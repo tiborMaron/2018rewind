@@ -1,8 +1,5 @@
 package com.codecool.spotify_service.model;
 
-import javax.persistence.*;
-
-@Entity
 public class Track {
 
     private int id;

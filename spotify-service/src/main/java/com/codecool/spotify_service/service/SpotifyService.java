@@ -1,35 +1,28 @@
 package com.codecool.spotify_service.service;
 
 import com.codecool.spotify_service.model.Track;
+import com.google.gson.Gson;
 import com.opencsv.CSVReader;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class SpotifyService {
 
-    @Autowired
-    private RestTemplateBuilder builder;
-
     private HashMap<String,Track> tracks = new HashMap<>();
+    private List<Track> toptracks = new ArrayList<>();
 
     public void selectFiles(List<String> filenames){
         for (String name: filenames){
             this.readFile(name);
         }
-        System.out.println(tracks);
     }
 
     public void readFile(String filename){
@@ -49,7 +42,6 @@ public class SpotifyService {
             }
             createTracks(tracksdata);
             tracksdata.clear();
-            getImage(tracks);
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -73,21 +65,55 @@ public class SpotifyService {
             counter--;
         }
     }
-    public void getImage(HashMap<String,Track> tracks) throws IOException {
+    public void getImageUrl(List<Track> tracks) throws IOException {
 
-        for(Map.Entry<String, Track> entry : tracks.entrySet()) {
-            Track value = entry.getValue();
-            Document doc = Jsoup.connect(value.getUrl()).get();
+        for (Track track: tracks) {
+            Document doc = Jsoup.connect(track.getUrl()).get();
             int counter = 0;
             for(Element meta : doc.select("meta")) {
                 if (counter == 9){
-                    System.out.println("Name: " + meta.attr("name") + " - Content: " + meta.attr("content"));
+                track.setImage(meta.attr("content"));
                     break;
-                    }
-                counter++;
                 }
-
+                counter++;
+            }
         }
     }
 
+    public List<Track> getTopHundred(){
+
+        List<Long> topnumber = new ArrayList<>();
+
+        for(Map.Entry<String, Track> entry : tracks.entrySet()) {
+            Track value = entry.getValue();
+            topnumber.add(value.getStream());
+        }
+        Collections.sort(topnumber);
+        Collections.reverse(topnumber);
+        for (int i = 0; i < 100; i++){
+            for(Map.Entry<String, Track> entry : tracks.entrySet()) {
+                Track value = entry.getValue();
+                if (value.getStream() == topnumber.get(i)){
+                    toptracks.add(0,value);
+                }
+            }
+        }
+        Collections.reverse(toptracks);
+        try {
+            getImageUrl(toptracks);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return toptracks;
+    }
+
+
+    public String parseHashMapToJson() {
+
+        List<Track> trackList = this.getTopHundred();
+        System.out.println(trackList);
+        String json =  new Gson().toJson(trackList);
+        System.out.println(json);
+        return json;
+    }
 }
