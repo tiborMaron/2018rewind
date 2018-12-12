@@ -1,4 +1,4 @@
-package com.codecool.youtube_service.model.categoryJSON;
+package com.codecool.youtube_service.model.category;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
         "id",
         "snippet"
 })
-public class Item {
+public class Category {
 
     @JsonProperty("id")
     private String id;
@@ -19,14 +19,14 @@ public class Item {
     /**
      * No args constructor for use in serialization
      */
-    public Item() {
+    public Category() {
     }
 
     /**
      * @param id
      * @param snippet
      */
-    public Item(String id, Snippet snippet) {
+    public Category(String id, Snippet snippet) {
         super();
         this.id = id;
         this.snippet = snippet;

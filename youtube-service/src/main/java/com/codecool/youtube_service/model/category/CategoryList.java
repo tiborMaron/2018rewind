@@ -1,4 +1,4 @@
-package com.codecool.youtube_service.model.categoryJSON;
+package com.codecool.youtube_service.model.category;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 public class CategoryList {
 
     @JsonProperty("items")
-    private List<Item> items = null;
+    private List<Category> items = null;
 
     /**
      * No args constructor for use in serialization
@@ -26,18 +26,18 @@ public class CategoryList {
     /**
      * @param items
      */
-    public CategoryList(List<Item> items) {
+    public CategoryList(List<Category> items) {
         super();
         this.items = items;
     }
 
     @JsonProperty("items")
-    public List<Item> getItems() {
+    public List<Category> getItems() {
         return items;
     }
 
     @JsonProperty("items")
-    public void setItems(List<Item> items) {
+    public void setItems(List<Category> items) {
         this.items = items;
     }
 

@@ -1,12 +1,12 @@
 package com.codecool.youtube_service.service;
 
 import com.codecool.youtube_service.model.Video;
-import com.codecool.youtube_service.model.categoryJSON.CategoryList;
-import com.codecool.youtube_service.model.categoryJSON.Item;
-import com.codecool.youtube_service.model.stats.Stat;
+import com.codecool.youtube_service.model.category.CategoryList;
+import com.codecool.youtube_service.model.category.Category;
 import com.codecool.youtube_service.model.stats.StatList;
 import com.codecool.youtube_service.model.video.VideoItem;
 import com.codecool.youtube_service.model.video.VideoList;
+
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -35,24 +35,6 @@ public class YoutubeService {
         }
     }
 
-    private String buildQueryString(Map<String, String> parameters) {
-        StringBuilder queryString = new StringBuilder("?key=" + properties.getProperty("youtube.apikey"));
-        for (Map.Entry<String, String> entry : parameters.entrySet()) {
-            queryString.append("&").append(entry.getKey()).append("=").append(entry.getValue());
-        }
-        return queryString.toString();
-    }
-
-    private <T> T runQuery(String url, Class<T> type) {
-        RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("user-agent", "");
-        HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
-        ResponseEntity<T> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, type);
-        return responseEntity.getBody();
-    }
-
-
     public Map<String, String> getCategories(String regionCode) {
         Map<String, String> queryParameters = new HashMap<>();
         queryParameters.put("part", "snippet");
@@ -61,16 +43,17 @@ public class YoutubeService {
         String url = "https://www.googleapis.com/youtube/v3/videoCategories" + buildQueryString(queryParameters);
 
         CategoryList categoryList = runQuery(url, CategoryList.class);
-        List<Item> items = categoryList.getItems();
+        List<Category> items = categoryList.getItems();
 
         Map<String, String> categories = new HashMap<>();
-        for (Item item : items) {
-            categories.put(item.getId(), item.getSnippet().getTitle());
+        for (Category category : items) {
+            categories.put(category.getId(), category.getSnippet().getTitle());
         }
+
         return categories;
     }
 
-    public List<Video> getTop100Videos(String regionCode, String categoryCode) {
+    public List<Video> getTop10Videos(String regionCode, String categoryCode) {
         Map<String, String> queryParameters = new HashMap<>();
         queryParameters.put("type", "video");
         queryParameters.put("part", "snippet");
@@ -94,20 +77,9 @@ public class YoutubeService {
     }
 
     private List<Video> getViewNumbers(List<Video> videos) {
-        StringBuilder ids = new StringBuilder();
-        boolean first = true;
-        for (Video video : videos) {
-            if (first) {
-                ids.append(video.getId());
-                first = false;
-            } else {
-                ids.append(",").append(video.getId());
-            }
-        }
-
         Map<String, String> queryParameters = new HashMap<>();
         queryParameters.put("part", "statistics");
-        queryParameters.put("id", ids.toString());
+        queryParameters.put("id", buildIds(videos));
 
         String url = "https://www.googleapis.com/youtube/v3/videos" + buildQueryString(queryParameters);
 
@@ -119,5 +91,36 @@ public class YoutubeService {
         }
 
         return videos;
+    }
+
+    private String buildIds(List<Video> videos) {
+        StringBuilder ids = new StringBuilder();
+        boolean first = true;
+        for (Video video : videos) {
+            if (first) {
+                ids.append(video.getId());
+                first = false;
+            } else {
+                ids.append(",").append(video.getId());
+            }
+        }
+        return ids.toString();
+    }
+
+    private String buildQueryString(Map<String, String> parameters) {
+        StringBuilder queryString = new StringBuilder("?key=" + properties.getProperty("youtube.apikey"));
+        for (Map.Entry<String, String> entry : parameters.entrySet()) {
+            queryString.append("&").append(entry.getKey()).append("=").append(entry.getValue());
+        }
+        return queryString.toString();
+    }
+
+    private <T> T runQuery(String url, Class<T> type) {
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("user-agent", "");
+        HttpEntity<String> entity = new HttpEntity<>("parameters", headers);
+        ResponseEntity<T> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, type);
+        return responseEntity.getBody();
     }
 }

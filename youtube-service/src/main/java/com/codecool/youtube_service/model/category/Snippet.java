@@ -1,4 +1,4 @@
-package com.codecool.youtube_service.model.categoryJSON;
+package com.codecool.youtube_service.model.category;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

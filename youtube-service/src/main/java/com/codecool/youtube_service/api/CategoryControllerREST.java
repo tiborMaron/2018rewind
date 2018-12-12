@@ -29,6 +29,6 @@ public class CategoryControllerREST {
     public List<Video> getTopVideos(
             @PathVariable("regionCode") String regionCode,
             @PathVariable("categoryCode") String categoryCode) {
-        return youtubeService.getTop100Videos(regionCode, categoryCode);
+        return youtubeService.getTop10Videos(regionCode, categoryCode);
     }
 }
