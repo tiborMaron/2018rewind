@@ -1,0 +1,65 @@
+.result {
+  background-color: black;
+  position: relative;
+  overflow: auto;
+  margin: 1em;
+  border: 1px solid black;
+  font-family: 'Netflix Sans','Helvetica Neue', Helvetica,Arial,sans-serif;
+}
+
+.details {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.rank-title {
+  display: table;
+  width: 100%;
+}
+
+.rank {
+  display: table-cell;
+  width: 50px;
+  height: 50px;
+  background-color: #e53734;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.title {
+  display: table-cell;
+  color: white;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.description {
+  color: #999;
+}
+
+
+.picture {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+img {
+  display: block;
+  position: relative;
+  right: 0;
+  width: 355px;
+  height: 200px;
+  max-width: 100%;
+  max-height: 56.2979%;
+}
+
+body {
+  background-color: red;
+}
