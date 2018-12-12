@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca587b76-4ab0-4676-8c93-03e0ae5ab55b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/GoogleServiceApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/google-service/target/" />
@@ -95,8 +92,8 @@
       <file leaf-file-name="JsonHandle.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+            <state relative-caret-position="230">
+              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -488,7 +485,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544523666738</updated>
       <workItem from="1544523668061" duration="25989000" />
-      <workItem from="1544602346253" duration="14579000" />
+      <workItem from="1544602346253" duration="14959000" />
     </task>
     <task id="LOCAL-00001" summary="xml files updated">
       <created>1544524181002</created>
@@ -595,11 +592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544620926956</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="JsonHandle's rank counter is done.">
+      <created>1544626466695</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1544626466695</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40568000" />
+    <option name="totallyTimeSpent" value="40948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -705,7 +709,8 @@
     <MESSAGE value="JsonHandle class refactored" />
     <MESSAGE value="RestControllerService class is refactored. more Autowired annotations added." />
     <MESSAGE value="SearchingResult class refactored" />
-    <option name="LAST_COMMIT_MESSAGE" value="SearchingResult class refactored" />
+    <MESSAGE value="JsonHandle's rank counter is done." />
+    <option name="LAST_COMMIT_MESSAGE" value="JsonHandle's rank counter is done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1019,8 +1024,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="230">
+          <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

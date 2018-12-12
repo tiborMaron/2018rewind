@@ -1,8 +1,5 @@
 package com.codecool.google_service.service;
 
-import com.codecool.google_service.controller.RestControllerService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
