@@ -13,12 +13,15 @@ import java.util.Map;
 
 public class JsonHandle {
 
-    public JSONArray buildJSONObject(List<String> listOfSearchResult) {
-        JSONArray jsonArray = new JSONArray();
-
-        for (String searchResult: listOfSearchResult) {
-            jsonArray.put(new JSONObject().put("search", searchResult));
+    public List buildJSONObject(List<String> listOfSearchResult) {
+        List<Map> list = new ArrayList<>();
+        for (int i = 0; i < listOfSearchResult.size(); i++) {
+            Map smallMap = new HashMap<>();
+            smallMap.put("rank", i);
+            smallMap.put("name", listOfSearchResult.get(i).split(",")[0]);
+            smallMap.put("value", listOfSearchResult.get(i).split(",")[1]);
+            list.add(smallMap);
         }
-        return jsonArray;
+        return list;
     }
 }
