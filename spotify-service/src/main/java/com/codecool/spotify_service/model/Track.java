@@ -8,9 +8,16 @@ public class Track {
     int id;
     String title;
     String name;
-    int stream;
+    long stream;
     String url;
 
+    public Track(int id, String title, String name, int stream, String url) {
+        this.id = id;
+        this.title = title;
+        this.name = name;
+        this.stream = stream;
+        this.url = url;
+    }
 
     public String getTitle() {
         return title;
@@ -48,20 +55,19 @@ public class Track {
         this.url = url;
     }
 
-    public void setStream(int stream) {
+    public void setStream(long stream) {
         this.stream = stream;
     }
 
-    public Track(String title) {
-        this.title = title;
-    }
 
     @Override
     public String toString() {
         return "Track{" +
-                "title='" + title + '\'' +
+                "id=" + id +
+                ", title='" + title + '\'' +
                 ", name='" + name + '\'' +
                 ", stream=" + stream +
+                ", url='" + url + '\'' +
                 '}';
     }
 }
