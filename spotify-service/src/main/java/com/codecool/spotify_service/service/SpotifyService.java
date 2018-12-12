@@ -18,6 +18,7 @@ public class SpotifyService {
 
     private HashMap<String,Track> tracks = new HashMap<>();
     private List<Track> toptracks = new ArrayList<>();
+    private String json;
 
     public void selectFiles(List<String> filenames){
         for (String name: filenames){
@@ -107,13 +108,17 @@ public class SpotifyService {
         return toptracks;
     }
 
+    public String parseListToJson(List<Track> tracks) {
+        return json =  new Gson().toJson(tracks);
+    }
 
-    public String parseHashMapToJson() {
-
-        List<Track> trackList = this.getTopHundred();
-        System.out.println(trackList);
-        String json =  new Gson().toJson(trackList);
-        System.out.println(json);
-        return json;
+    public String getFirstTen() {
+        List<Track> tracks = getTopHundred();
+        List<Track> topten = new ArrayList<>();
+        for (int i = 9; i > 0; i--) {
+            topten.add(tracks.get(i));
+        }
+        Collections.reverse(topten);
+        return parseListToJson(topten);
     }
 }
