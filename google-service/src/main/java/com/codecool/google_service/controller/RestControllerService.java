@@ -5,10 +5,7 @@ import com.codecool.google_service.repository.SearchingResultRepository;
 import com.codecool.google_service.service.JsonHandle;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -28,30 +25,24 @@ public class RestControllerService {
 
     @GetMapping("/get-toplist")
     public @ResponseBody List<Map> getTopListInJSON() {
-        return handleUserRequest("world");
-    }
-
-    @GetMapping("/get-toplist/{page}")
-    public JSONObject getToplistByPage(@PathVariable String page) {
-        return null;
+        return handleUserRequest("world", 1);
     }
 
     @GetMapping("/get-toplist-by-country/{country}")
-    public List<Map> getTopListByCountry(@PathVariable String country) {
-        return handleUserRequest(country);
+    public List<Map> getTopListByCountry(@PathVariable String country, @RequestParam(name = "page", required = false) String page) {
+        System.out.println(page);
+        if(page == null){
+            page = "1";
+        }
+        return handleUserRequest(country, Integer.parseInt(page));
     }
 
 
-    @GetMapping("/get-toplist-by-country/{country}?page={page}")
-    public JSONObject getTopListByCountryAndByPage(@PathVariable("country") String country, @PathVariable("page") String page) {
-        System.out.println(country + " " + page);
-        return null;
-    }
-
-    private List<Map> handleUserRequest(String country) {
+    private List<Map> handleUserRequest(String country, int pageNumber) {
+        System.out.println(pageNumber);
         List listOfTopSearch = jsonHandle.buildJSONObject(
                 query.makeListOfStringOfTopSearch(
-                        searchingResultRepository.findSearchingResultByCountryName(country)));
+                        searchingResultRepository.findSearchingResultByCountryName(country)), pageNumber);
         return listOfTopSearch;
     }
 }
