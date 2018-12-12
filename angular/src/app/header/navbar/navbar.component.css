@@ -12,8 +12,10 @@ a:focus {
 }
 
 .navbar {
+  z-index: 9999;
   position: sticky;
   top: 0;
+  box-shadow: 0 0 10px black;
 }
 
 .navbar-container {
@@ -45,5 +47,6 @@ a:focus {
 }
 
 .google {
-
+  background-color: white;
+  color: black;
 }
