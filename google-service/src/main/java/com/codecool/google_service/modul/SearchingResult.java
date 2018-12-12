@@ -22,10 +22,6 @@ public class SearchingResult {
         this.searchedResult = searchedResult;
     }
 
-    public SearchedCountry getCountry() {
-        return country;
-    }
-
     public String getSearchedResult() {
         return searchedResult;
     }

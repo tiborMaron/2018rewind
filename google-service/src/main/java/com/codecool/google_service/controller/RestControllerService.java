@@ -16,10 +16,6 @@ import java.util.Map;
 @RestController
 public class RestControllerService {
 
-//    @GetMapping("/get-toplist/{country}")
-//    public void getToplist(@PathVariable("country") String country) {
-//        return
-//    }
     @Autowired
     SearchingResultRepository searchingResultRepository;
 
@@ -28,6 +24,7 @@ public class RestControllerService {
 
     @Autowired
     JsonHandle jsonHandle;
+
 
     @GetMapping("/get-toplist")
     public @ResponseBody List<Map> getTopListInJSON() {
@@ -46,7 +43,8 @@ public class RestControllerService {
 
 
     @GetMapping("/get-toplist-by-country/{country}?page={page}")
-    public JSONObject getTopListByCountryAndByPage(@PathVariable("county") String country, @PathVariable("page") String page) {
+    public JSONObject getTopListByCountryAndByPage(@PathVariable("country") String country, @PathVariable("page") String page) {
+        System.out.println(country + " " + page);
         return null;
     }
 
