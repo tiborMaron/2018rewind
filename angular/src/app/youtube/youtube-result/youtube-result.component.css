@@ -22,7 +22,7 @@
 .rank {
   border-radius: 15px;
   display: table-cell;
-  width: 50px;
+  width: 70px;
   height: 50px;
   background-color: #e62117;
   color: white;
@@ -37,8 +37,9 @@
   color: black;
   font-weight: bolder;
   font-size: x-large;
-  text-align: center;
+  text-align: left;
   vertical-align: middle;
+  padding-left: 10px;
 }
 
 .description {

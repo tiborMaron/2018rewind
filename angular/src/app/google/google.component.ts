@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Renderer2} from '@angular/core';
 import {GoogleResult} from "../model/GoogleResult";
 import {GoogleService} from "../service/google.service";
 
@@ -12,13 +12,16 @@ export class GoogleComponent implements OnInit {
   results: GoogleResult[];
 
   constructor(
-    private service: GoogleService
+    private service: GoogleService,
+    private renderer: Renderer2
   ) { }
 
   ngOnInit() {
     this.service.getResults().subscribe(
       results => this.results = results
-    )
+    );
+
+    this.renderer.setStyle(document.body, 'background-color', '#ffffff')
   }
 
 }
