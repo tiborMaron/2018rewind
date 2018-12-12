@@ -5,11 +5,13 @@ import javax.persistence.*;
 @Entity
 public class Track {
 
-    int id;
-    String title;
-    String name;
-    long stream;
-    String url;
+    private int id;
+    private String title;
+    private String name;
+    private long stream;
+    private String url;
+    private String image;
+
 
     public Track(int id, String title, String name, int stream, String url) {
         this.id = id;
@@ -59,6 +61,13 @@ public class Track {
         this.stream = stream;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     @Override
     public String toString() {

@@ -11,8 +11,8 @@ public class SpotifyController {
     @Autowired
     SpotifyService spotifyService;
 
-    /*@GetMapping("/get-toplist")
+    @GetMapping("/get-toplist")
     public void getTopList(){
 
-    }*/
+    }
 }
