@@ -1,4 +1,4 @@
-package com.codecool.youtube_service.model;
+package com.codecool.youtube_service.model.categoryJSON;
 
 import java.util.List;
 

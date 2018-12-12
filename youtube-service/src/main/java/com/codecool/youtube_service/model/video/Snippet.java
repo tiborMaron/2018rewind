@@ -1,4 +1,5 @@
-package com.codecool.youtube_service.model;
+
+package com.codecool.youtube_service.model.video;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,25 +7,24 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
-        "title"
+    "publishedAt",
+    "title",
 })
 public class Snippet {
 
+    @JsonProperty("publishedAt")
+    private String publishedAt;
     @JsonProperty("title")
     private String title;
 
-    /**
-     * No args constructor for use in serialization
-     */
-    public Snippet() {
+    @JsonProperty("publishedAt")
+    public String getPublishedAt() {
+        return publishedAt;
     }
 
-    /**
-     * @param title
-     */
-    public Snippet(String title) {
-        super();
-        this.title = title;
+    @JsonProperty("publishedAt")
+    public void setPublishedAt(String publishedAt) {
+        this.publishedAt = publishedAt;
     }
 
     @JsonProperty("title")
