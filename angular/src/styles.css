@@ -3,5 +3,5 @@ html, body {
 }
 
 body {
-  transition: background-color ease-in-out 0.3s;
+  transition: background ease-in-out 0.3s;
 }
