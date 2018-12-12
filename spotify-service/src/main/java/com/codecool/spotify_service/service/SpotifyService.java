@@ -16,11 +16,12 @@ import java.util.*;
 @Service
 public class SpotifyService {
 
-    private HashMap<String,Track> tracks = new HashMap<>();
+    private HashMap<String, Track> tracks = new HashMap<>();
     private List<Track> toptracks = new ArrayList<>();
-    private String json;
 
     public void selectFiles(List<String> filenames){
+        tracks.clear();
+        toptracks.clear();
         for (String name: filenames){
             this.readFile(name);
         }
@@ -73,7 +74,7 @@ public class SpotifyService {
             int counter = 0;
             for(Element meta : doc.select("meta")) {
                 if (counter == 9){
-                track.setImage(meta.attr("content"));
+                    track.setImage(meta.attr("content"));
                     break;
                 }
                 counter++;
@@ -81,7 +82,7 @@ public class SpotifyService {
         }
     }
 
-    public List<Track> getTopHundred(){
+    public void getTopHundred(){
 
         List<Long> topnumber = new ArrayList<>();
 
@@ -105,15 +106,14 @@ public class SpotifyService {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return toptracks;
     }
 
     public String parseListToJson(List<Track> tracks) {
-        return json =  new Gson().toJson(tracks);
+        return new Gson().toJson(tracks);
     }
 
     public String getFirstTen() {
-        List<Track> tracks = getTopHundred();
+        List<Track> tracks = toptracks;
         List<Track> topten = new ArrayList<>();
         for (int i = 9; i > 0; i--) {
             topten.add(tracks.get(i));
@@ -121,4 +121,16 @@ public class SpotifyService {
         Collections.reverse(topten);
         return parseListToJson(topten);
     }
+    
+    public String getPage(String page){
+        List<Track> tracks = toptracks;
+        List<Track> pageData = new ArrayList<>();
+        String from = page + "0";
+        String to = page + "9";
+        for (int i = Integer.parseInt(from); i < (Integer.parseInt(to)+1) ; i++) {
+            pageData.add(0,tracks.get(i));
+        }
+        Collections.reverse(pageData);
+        return parseListToJson(pageData);
+     }
 }

@@ -1,4 +1,4 @@
-package com.codecool.spotify_service.service;
+package com.codecool.spotify_service.init;
 
 import java.util.ArrayList;
 import java.util.List;
