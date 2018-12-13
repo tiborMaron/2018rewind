@@ -1,4 +1,5 @@
 export class NetflixResult {
-  rank: number
-  title: string
+  name: string;
+  details: string;
+  imageUrl: string;
 }

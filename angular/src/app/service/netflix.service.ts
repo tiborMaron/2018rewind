@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import {NetflixResult} from "../model/NetflixResult";
 import {Observable, of} from "rxjs/index";
+import {environment} from "../../environments/environment";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class NetflixService{
 
-  private serverUri = '';
-
-  private mock : NetflixResult[] = [{title: "title1", rank: 1}, {title: "title2", rank: 2}, {title: "title3", rank: 3}];
+  private serverUri = environment.netflixURI;
 
   getResults(): Observable<NetflixResult[]>{
-    return of(this.mock)
+    return this.http.get<NetflixResult[]>(this.serverUri + "/netflix")
   }
 
   getResultsByPage(page: number): Observable<NetflixResult[]>{
-    return of(this.mock);
+    return null;
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 }

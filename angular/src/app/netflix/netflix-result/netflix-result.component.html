@@ -2,17 +2,17 @@
   <div class="details">
     <div class="rank-title">
       <div class="rank">
-        {{ result.rank }}.
+        {{ rank }}
       </div>
       <div class="title">
-        {{ result.title }}
+        {{ result.name }}
       </div>
     </div>
     <div class="description">
-      In this dark alt-history thriller, a naïve law student and a world-weary detective uncover a conspiracy that has tyrannized Poland for decades.
+      {{ result.details }}
     </div>
   </div>
   <div class="picture">
-    <img >
+    <img src="{{ result.imageUrl}}" >
   </div>
 </div>
