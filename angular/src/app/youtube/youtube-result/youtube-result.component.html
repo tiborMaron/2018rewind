@@ -2,19 +2,20 @@
   <div class="details">
     <div class="rank-title">
       <div class="rank">
-        {{ result.rank }}.
+        {{ rank }}
       </div>
       <div class="title">
         {{ result.title }}
       </div>
     </div>
     <div class="description">
-      In this dark alt-history thriller, a naïve law student and a world-weary detective uncover a conspiracy that has tyrannized Poland for decades.
+      <div>{{ result.publishedAt }}</div>
+      <div>{{ result.viewNumber }}</div>
     </div>
   </div>
   <div class="video">
     <iframe
-      src="https://www.youtube.com/embed/HQxbXV_7e-I"
+      [src]="videoURL"
       frameborder="0"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
     </iframe>

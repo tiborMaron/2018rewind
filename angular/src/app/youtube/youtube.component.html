@@ -1,4 +1,4 @@
 <div>
   <h1>Youtube</h1>
-  <app-youtube-result *ngFor="let result of results" [result]="result"></app-youtube-result>
+  <app-youtube-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-youtube-result>
 </div>
