@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from "rxjs/index";
 import {YoutubeResult} from "../model/YoutubeResult";
+import {environment} from "../../environments/environment";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
 })
 export class YoutubeService {
 
-  private serverUri = '';
-
-  private mock : YoutubeResult[] = [{title: "title1", rank: 1}, {title: "title2", rank: 2}, {title: "title3", rank: 3}];
+  private serverUri = environment.youtubeURI;
 
   getResults(): Observable<YoutubeResult[]>{
-    return of(this.mock);
+    return this.http.get<YoutubeResult[]>(this.serverUri + '/topvideos/HU/1');
   }
 
   getResultsByPage(page: number): Observable<YoutubeResult[]>{
-    return of(this.mock);
+    return null;
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 }

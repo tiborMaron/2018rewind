@@ -1,4 +1,6 @@
 export class YoutubeResult {
-  rank: number
-  title: string
+  id: string;
+  publishedAt: string;
+  title: string;
+  viewNumber: number;
 }
