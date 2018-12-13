@@ -11,7 +11,10 @@ public class Netflix {
     private String name;
 
     @Column(length = 5000)
+
     private String details;
+
+    @Column(length = 5000)
     private String imageUrl;
 
     public Netflix(String name, String details, String imageUrl) {
