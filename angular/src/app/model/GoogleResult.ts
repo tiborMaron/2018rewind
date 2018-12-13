@@ -1,4 +1,5 @@
 export class GoogleResult {
-  rank: number
-  title: string
+  rank: number;
+  name: string;
+  value: string
 }
