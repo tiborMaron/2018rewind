@@ -1,4 +1,4 @@
 <div>
   <h1>Spotify</h1>
-  <app-spotify-result *ngFor="let result of results" [result]="result"></app-spotify-result>
+  <app-spotify-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-spotify-result>
 </div>

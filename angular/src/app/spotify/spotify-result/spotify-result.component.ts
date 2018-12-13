@@ -9,6 +9,7 @@ import {SpotifyResult} from "../../model/SpotifyResult";
 export class SpotifyResultComponent implements OnInit {
 
   @Input() result: SpotifyResult;
+  @Input() rank: number;
 
   constructor() { }
 

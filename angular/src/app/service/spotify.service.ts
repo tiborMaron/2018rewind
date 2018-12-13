@@ -1,23 +1,25 @@
 import { Injectable } from '@angular/core';
 import {Observable, of} from "rxjs/index";
 import {SpotifyResult} from "../model/SpotifyResult";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SpotifyService {
 
-  private serverUri = '';
-
-  private mock : SpotifyResult[] = [{title: "title1", rank: 1}, {title: "title2", rank: 2}, {title: "title3", rank: 3}];
+  private serverUri = environment.spotifyURI;
 
   getResults(): Observable<SpotifyResult[]>{
-    return of(this.mock)
+    return this.http.get<SpotifyResult[]>(this.serverUri + '/get-toplist')
   }
 
   getResultsByPage(page: number): Observable<SpotifyResult[]>{
-    return of(this.mock);
+    return null
   }
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 }
