@@ -32,21 +32,37 @@ a:focus {
 }
 
 .youtube {
-  background-color: red;
-  color: white;
+  background-color: #b90000;
 }
 
 .netflix {
-  background-color: black;
-  color: red;
+  background-color: #040404;
 }
 
 .spotify {
-  background-color: green;
-  color: white;
+  background-color: #3ed760;
 }
 
 .google {
-  background-color: white;
-  color: black;
+  background-color: #ffffff;
+}
+
+.youtube img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.netflix img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.spotify img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.google img {
+  width: 30%;
+  vertical-align: middle;
 }
