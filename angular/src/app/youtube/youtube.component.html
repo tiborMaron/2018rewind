@@ -6,14 +6,13 @@
 
     <div>
       <label for="country">Country</label>
-      <select id="country">
-        <option *ngFor="let country of countries" (select)="updateData(country, 1)">{{ country.name }}</option>
+      <select id="country" (change)="updateCountry({name: $event.target.value.toString().substring(0, $event.target.value.search('&')) , alpha2Code: $event.target.value.toString().substring($event.target.value.search('&') + 1)})">
+        <option *ngFor="let country of countries" [value]="country.name + '&' + country.alpha2Code">{{ country.name }}</option>
       </select>
 
       <label for="category">Category</label>
-      <select id="category">
-        <option></option>
-        <!--<option *ngFor="let country of countries" (select)="updateData(country, 1)">{{ country.name }}</option>-->
+      <select id="category" (change)="updateCategory({name: $event.target.value.toString().substring(0, $event.target.value.search('&')) , id: $event.target.value.toString().substring($event.target.value.search('&') + 1)})">
+        <option *ngFor="let category of categories" [value]="category.name + '&' + category.id ">{{ category.name }}</option>
       </select>
     </div>
   </div>
