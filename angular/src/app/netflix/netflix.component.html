@@ -1,4 +1,4 @@
 <div>
   <h1>Netflix</h1>
-  <app-netflix-result *ngFor="let result of results" [result]="result"></app-netflix-result>
+  <app-netflix-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-netflix-result>
 </div>

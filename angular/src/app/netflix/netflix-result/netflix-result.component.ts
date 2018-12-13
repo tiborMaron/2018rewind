@@ -9,6 +9,7 @@ import {NetflixResult} from "../../model/NetflixResult";
 export class NetflixResultComponent implements OnInit {
 
   @Input() result: NetflixResult;
+  @Input() rank: number;
 
   constructor() { }
 
