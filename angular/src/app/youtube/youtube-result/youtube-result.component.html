@@ -9,8 +9,8 @@
       </div>
     </div>
     <div class="description">
-      <div>{{ result.publishedAt }}</div>
-      <div>{{ result.viewNumber }}</div>
+      <div>Published on {{result.publishedAt | date:'MM dd, yyyy' }}</div>
+      <div>{{ result.viewNumber }} views</div>
     </div>
   </div>
   <div class="video">

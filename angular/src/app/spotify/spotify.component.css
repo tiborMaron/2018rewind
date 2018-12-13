@@ -1,0 +1,20 @@
+.spotify {
+  display: table;
+  position: relative;
+}
+
+.spotify-search-row {
+  display: inline-block;
+  position: relative;
+}
+
+.spotify-body-logo {
+  display: table;
+  width: 100%;
+}
+
+.spotify-body-logo img {
+  display: table-cell;
+  width: 70px;
+  vertical-align: middle;
+}
