@@ -7,9 +7,11 @@ import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+@CrossOrigin
 @RestController
 public class RestControllerService {
 
@@ -36,6 +38,13 @@ public class RestControllerService {
         }
         return handleUserRequest(country, Integer.parseInt(page));
     }
+
+    @GetMapping("/get-countries")
+    public @ResponseBody List<String> getCountries() {
+        List<String> lista = Arrays.asList("france", "germany", "hungary", "russia", "uk", "ukraine", "usa" ,"world");
+        return lista;
+    }
+
 
 
     private List<Map> handleUserRequest(String country, int pageNumber) {
