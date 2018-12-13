@@ -5,7 +5,16 @@
     </div>
 
     <div>
-      <!--Here comes the dropdown thingy.-->
+      <label for="country">Country</label>
+      <select id="country">
+        <option *ngFor="let country of countries" (select)="updateData(country, 1)">{{ country.name }}</option>
+      </select>
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option></option>
+        <!--<option *ngFor="let country of countries" (select)="updateData(country, 1)">{{ country.name }}</option>-->
+      </select>
     </div>
   </div>
 
