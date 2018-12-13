@@ -10,6 +10,8 @@ import {YoutubeService} from "../service/youtube.service";
 export class YoutubeComponent implements OnInit {
 
   results: YoutubeResult[];
+  countries: {name: string, alpha2Code: string}[];
+  selectedCountry: {name: string, alpha2Code: string};
 
   constructor(
     private service: YoutubeService,
@@ -17,11 +19,21 @@ export class YoutubeComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.service.getResults().subscribe(
-      results => this.results = results
+    this.service.getCountries().subscribe(
+      countries => {
+        this.countries = countries;
+        this.selectedCountry = countries[0];
+        this.updateData(this.selectedCountry, 1);
+      }
     );
 
     this.renderer.setStyle(document.body, 'background-color', '#ffffff')
+  }
+
+  updateData(country: {name: string, alpha2Code: string}, category: number) {
+    this.service.getResults(country, category).subscribe(results =>
+       this.results = results
+    );
   }
 
 }
