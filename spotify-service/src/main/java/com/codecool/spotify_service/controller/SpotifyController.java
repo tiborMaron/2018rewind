@@ -3,10 +3,12 @@ package com.codecool.spotify_service.controller;
 import com.codecool.spotify_service.init.InitFiles;
 import com.codecool.spotify_service.service.SpotifyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 public class SpotifyController {
 
@@ -22,8 +24,8 @@ public class SpotifyController {
         return spotifyService.getFirstTen();
     }
 
-    @GetMapping("/get-toplist?page={page}")
-    public String getTracksByPage(@RequestParam("page") String page){
+    @GetMapping("/get-toplist/{page}")
+    public String getTracksByPage(@PathVariable String page){
         spotifyService.selectFiles(initFiles.getFilenames());
         spotifyService.getTopHundred();
         return spotifyService.getPage(page);

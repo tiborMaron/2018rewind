@@ -125,12 +125,17 @@ public class SpotifyService {
     public String getPage(String page){
         List<Track> tracks = toptracks;
         List<Track> pageData = new ArrayList<>();
-        String from = page + "0";
-        String to = page + "9";
-        for (int i = Integer.parseInt(from); i < (Integer.parseInt(to)+1) ; i++) {
-            pageData.add(0,tracks.get(i));
+        if (page.equals("1")){
+            return getFirstTen();
+        }else{
+            int from = (Integer.parseInt(page) -1) *10;
+            int to = (Integer.parseInt(page)*10);
+            for (int i = from; i < to ; i++) {
+                pageData.add(0,tracks.get(i));
+            }
+            Collections.reverse(pageData);
+            return parseListToJson(pageData);
         }
-        Collections.reverse(pageData);
-        return parseListToJson(pageData);
+
      }
 }
