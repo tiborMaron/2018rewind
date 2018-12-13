@@ -11,8 +11,4 @@ import {SpotifyResult} from "./model/SpotifyResult";
 })
 
 export class AppComponent {
-  google: GoogleResult = {rank: 1, title: "Bitcoin"}
-  netflix: NetflixResult = {rank: 1, title: "Daredevil"}
-  spotify: SpotifyResult = {rank: 1, title: "Belehalok"}
-  youtube: YoutubeResult = {rank: 1, title: "Despacito"}
 }
