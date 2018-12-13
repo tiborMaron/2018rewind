@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  googleURI: 'http://192.168.160.226:60011'
+  googleURI: 'http://192.168.160.226:60011',
+  spotifyURI: 'http://192.168.160.89:60013'
 };
 
 /*
