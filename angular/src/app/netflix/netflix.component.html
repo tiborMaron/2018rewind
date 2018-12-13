@@ -1,4 +1,14 @@
-<div>
-  <h1>Netflix</h1>
+
+<div class="netflix">
+  <div class="netflix-search-row">
+    <div class="netflix-body-logo">
+      <img src="./assets/img/core-img/netflix-body-logo.png"/>
+    </div>
+
+    <div>
+      <!--Here comes the dropdown thingy.-->
+    </div>
+  </div>
+
   <app-netflix-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-netflix-result>
 </div>

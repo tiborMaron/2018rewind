@@ -1,4 +1,13 @@
-<div>
-  <h1>Spotify</h1>
+<div class="spotify">
+  <div class="spotify-search-row">
+    <div class="spotify-body-logo">
+      <img src="./assets/img/core-img/spotify-body-logo.png"/>
+    </div>
+
+    <div>
+      <!--Here comes the dropdown thingy.-->
+    </div>
+  </div>
+
   <app-spotify-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-spotify-result>
 </div>

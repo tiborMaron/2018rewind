@@ -1,0 +1,20 @@
+.youtube {
+  display: table;
+  position: relative;
+}
+
+.youtube-search-row {
+  display: inline-block;
+  position: relative;
+}
+
+.youtube-body-logo {
+  display: table;
+  width: 100%;
+}
+
+.youtube-body-logo img {
+  display: table-cell;
+  width: 70px;
+  vertical-align: middle;
+}
