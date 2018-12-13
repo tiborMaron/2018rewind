@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ca587b76-4ab0-4676-8c93-03e0ae5ab55b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/google-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/google-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/google-service/target/" />
     <ignored path="$PROJECT_DIR$/youtube-service/target/" />
@@ -70,7 +68,7 @@
       <file leaf-file-name="JsonHandle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
+            <state relative-caret-position="99">
               <caret line="13" column="71" lean-forward="true" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -82,8 +80,8 @@
       <file leaf-file-name="RestControllerService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+            <state relative-caret-position="134">
+              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#701#702#0" expanded="true" />
@@ -580,11 +578,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544628043783</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="get countries endpoint is done.">
+      <created>1544702778128</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1544702778128</updated>
+    </task>
+    <task id="LOCAL-00021" summary="rest controller is refactored.">
+      <created>1544704151036</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1544704151036</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44342000" />
+    <option name="totallyTimeSpent" value="45855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -609,10 +621,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.32880098" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32880098" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.33745363" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33745363" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32880098" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32880098" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info anchor="bottom" id="Problems" order="7" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
@@ -722,7 +734,9 @@
     <MESSAGE value="JsonHandle's rank counter is done." />
     <MESSAGE value="branch tested. Frontend need to test." />
     <MESSAGE value="application.properties refactored." />
-    <option name="LAST_COMMIT_MESSAGE" value="application.properties refactored." />
+    <MESSAGE value="get countries endpoint is done." />
+    <MESSAGE value="rest controller is refactored." />
+    <option name="LAST_COMMIT_MESSAGE" value="rest controller is refactored." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1020,16 +1034,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="13" column="71" lean-forward="true" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/DAO/InitalizeDB.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -1037,10 +1041,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/service/JsonHandle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="13" column="71" lean-forward="true" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/google-service/src/main/java/com/codecool/google_service/controller/RestControllerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="41" column="33" lean-forward="true" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="134">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#701#702#0" expanded="true" />
