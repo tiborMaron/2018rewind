@@ -3,5 +3,6 @@ html, body {
 }
 
 body {
-  transition: background ease-in-out 0.3s;
+  transition: background-color ease-in-out 0.3s;
+  background-size: contain;
 }
