@@ -3,10 +3,11 @@
     <div class="youtube-body-logo">
       <img src="./assets/img/core-img/youtube-body-logo.png"/>
     </div>
+
+    <div>
+      <!--Here comes the dropdown thingy.-->
+    </div>
   </div>
 
-  <div>
-
-  </div>
   <app-youtube-result *ngFor="let result of results, let i = index" [result]="result" [rank]="i + 1"></app-youtube-result>
 </div>
