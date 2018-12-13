@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  googleURI: 'http://192.168.160.226:60011'
 };
 
 /*
