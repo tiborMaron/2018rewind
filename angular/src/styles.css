@@ -1,0 +1,8 @@
+html, body {
+  margin: 0;
+}
+
+body {
+  transition: background-color ease-in-out 0.3s;
+  background-size: contain;
+}

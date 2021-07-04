@@ -1,0 +1,23 @@
+<div class="result">
+  <div class="details">
+    <div class="rank-title">
+      <div class="rank">
+        {{ rank }}
+      </div>
+      <div class="title">
+        {{ result.title }}
+      </div>
+    </div>
+    <div class="description">
+      <div>Published on {{result.publishedAt | date:'MM dd, yyyy' }}</div>
+      <div>{{ result.viewNumber }} views</div>
+    </div>
+  </div>
+  <div class="video">
+    <iframe
+      [src]="videoURL"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+.result {
+  background-color: white;
+  position: relative;
+  overflow: auto;
+  margin: 2em;
+  border: 1px solid white;
+  font-family: "YouTube Noto",Roboto,Arial,Helvetica,sans-serif;
+  font-weight: bolder;
+}
+
+.details {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.rank-title {
+  display: table;
+  width: 100%;
+}
+
+.rank {
+  border-radius: 15px;
+  display: table-cell;
+  width: 70px;
+  height: 50px;
+  background-color: #e62117;
+  color: white;
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.title {
+  display: table-cell;
+  color: black;
+  font-weight: bolder;
+  font-size: x-large;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.description {
+  color: #999999;
+  margin-top: 10px;
+  padding-left: 80px;
+}
+
+.video {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+
+iframe {
+  display: block;
+  position: relative;
+  right: 0;
+  width: 355px;
+  height: 200px;
+  max-width: 100%;
+  max-height: 56.2979%;
+}

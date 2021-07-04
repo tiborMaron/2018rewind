@@ -1,0 +1,13 @@
+<div class="google">
+  <div class="google-search-row">
+    <div class="google-body-logo">
+      <img src="./assets/img/core-img/google-body-logo.png"/>
+    </div>
+
+    <div>
+      <!--Here comes the dropdown thingy.-->
+    </div>
+  </div>
+
+  <app-google-result *ngFor="let result of results" [result]="result"></app-google-result>
+</div>

@@ -1,0 +1,68 @@
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+a:active {
+  color: initial;
+}
+
+a:focus {
+  outline: none;
+}
+
+.navbar {
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 10px black;
+}
+
+.navbar-container {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.navbar-item {
+  display: table-cell;
+  height: 70px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.youtube {
+  background-color: #b90000;
+}
+
+.netflix {
+  background-color: #040404;
+}
+
+.spotify {
+  background-color: #3ed760;
+}
+
+.google {
+  background-color: #ffffff;
+}
+
+.youtube img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.netflix img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.spotify img {
+  width: 30%;
+  vertical-align: middle;
+}
+
+.google img {
+  width: 30%;
+  vertical-align: middle;
+}

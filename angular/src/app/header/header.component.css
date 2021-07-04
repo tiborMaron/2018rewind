@@ -1,0 +1,12 @@
+.header {
+  display: table;
+  height: 70px ;
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.header img {
+  display: inline-block;
+  height: 100%;
+}

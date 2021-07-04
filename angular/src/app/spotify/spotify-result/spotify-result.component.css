@@ -1,0 +1,60 @@
+.result {
+  margin: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  color: white;
+  font-size: larger;
+  transition: background-color ease-in-out 0.15s;
+}
+
+.result:hover {
+  background-color: rgba(13,13,13, 0.5);
+}
+
+.description {
+  display: table;
+  width: 100%;
+}
+
+.description div {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.rank {
+  text-align: center;
+  position: relative;
+  width: 50px;
+}
+
+.rank svg {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  fill: #1db954;
+}
+
+.rank span{
+  color: white;
+  position: relative;
+}
+
+.details {
+  padding-left: 5%;
+}
+
+.title {
+  font-size: x-large;
+}
+
+.picture {
+  float: right;
+}
+
+img {
+  display: block;
+  width: 100px;
+  height: 100px;
+}

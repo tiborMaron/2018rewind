@@ -1,0 +1,20 @@
+.netflix {
+  display: table;
+  position: relative;
+}
+
+.netflix-search-row {
+  display: inline-block;
+  position: relative;
+}
+
+.netflix-body-logo {
+  display: table;
+  width: 100%;
+}
+
+.netflix-body-logo img {
+  display: table-cell;
+  width: 70px;
+  vertical-align: middle;
+}
